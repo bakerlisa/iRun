@@ -1,1 +1,1 @@
-# mern-project
+# MERN final project
