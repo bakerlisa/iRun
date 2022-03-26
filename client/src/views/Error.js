@@ -1,13 +1,17 @@
 import React from 'react';
-import confused from '../img/confused.gif'
+import { Link } from 'react-router-dom';
+import confused from '../img/running-fail.gif'
+
+import styled from '../css/viewsCSS/Error.module.css'
 
 const Error = (props) => {
     return(
-        <div>
+        <div className={styled.failWrp}>
             <h1>Hmm...</h1>
+            <h3>We've failed</h3>
             <img src={confused} alt="confused gif" />
-            <p>There seems to be some kind of mistake. Would like to add this author?</p>
-            <div className="button-lg">Create Author</div>
+            <p>Looks like this page doesn't exsist </p>
+            <Link to="/" className="button-lg">Home</Link>
         </div>
     )
 }
