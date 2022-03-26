@@ -6,9 +6,10 @@ import Home from './views/Home';
 import Error from './views/Error';
 import Fueling from './views/Fueling';
 
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faMoneyBill } from '@fortawesome/pro-solid-svg-icons';
-import { faCode, faHighlighter } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faCheckSquare, faFacebook } from '@fortawesome/fontawesome-free-solid'
+import { faFacebook,faTwitter,faInstagram,faYoutube } from '@fortawesome/free-brands-svg-icons'
+import Newsletter from './components/newsletter';
 
 
 function App() {
@@ -35,25 +36,6 @@ function App() {
             <Fueling />
           </Route>
 
-          <Route path exact="/calorie-counter">
-
-          </Route>
-
-          <Route path exact="/race">
-
-          </Route>
-
-          <Route path exact="/connect">
-
-          </Route>
-
-          <Route path exact="/expert">
-
-          </Route>
-
-          <Route path exact="/train">
-
-          </Route>
 
           {/* ERROR */}
           <Route exact path="/404">
@@ -70,14 +52,22 @@ function App() {
           <div className="col-4">
             <h5>iRun</h5>
             <p>This is a our missiona nd what we stand for and why we do what we do</p>
-            <FontAwesomeIcon icon={faCode} />
+            <div className="socialWrp">
+              <a href="" target="_blank"><FontAwesomeIcon icon={faFacebook} /></a>
+              <a href="" target="_blank"><FontAwesomeIcon icon={faTwitter} /></a>
+              <a href="" target="_blank"><FontAwesomeIcon icon={faInstagram} /></a>
+              <a href="" target="_blank"><FontAwesomeIcon icon={faYoutube} /></a>
+            </div>
           </div>
 
           <div className="col-4">
 
           </div>
           <div className="col-4"></div>
-          <div className="col-4"></div>
+
+          <div className="col-4">
+            <Newsletter />
+          </div>
         </div>
       </footer>
     </>

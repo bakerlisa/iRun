@@ -26,6 +26,9 @@ h1{font-size: 65px; margin: 0;padding: 0;}
 /* FOOTER */
 footer{background-color:var(--black); padding: 50px; color:var(--whtie);}
 footer .container{display: flex;align-items: center;justify-content: center;flex-wrap: wrap;}
+footer svg{fill: white;}
+footer a{ padding: 0 5px; color:var(--white); font-size: 20px;}
+footer a:hover{color:var(--blue);}
 
 /* FORM */
 input + span,textarea + span,select + span{display: none;}
@@ -38,4 +41,8 @@ nav a:hover{color:var(--white);}
 
 /* CONTAINER */
 .container{max-width: 1200px; margin: 0 auto;}
+
+/* socialWrp */
+.socialWrp{display: flex;align-items: start;justify-content: start;color:var(--white);}
+.socialWrp i{padding: 5px;}
 
