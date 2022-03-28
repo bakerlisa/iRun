@@ -20,11 +20,15 @@ h1{font-size: 65px; margin: 0;padding: 0;}
 
 .App {text-align: center;}
 
+/* BUTTON */
+.button{background-color:var(--blue); color:var(--white); text-decoration: none; display: block; max-width: 150px; margin: 25px auto; padding: 10px; border:solid 2px var(--blue); transition: all .25s ease-in;}
+  .button:hover{cursor: pointer; background-color:transparent; transition: all .25s ease-in; color:var(--blue);}
+
 /* COL */
 .col-4{width: 25%; padding: 25px;}
 
 /* FOOTER */
-footer{background-color:var(--black); padding: 50px; color:var(--whtie);}
+footer{background-color:var(--black); color:var(--whtie);}
 footer .container{display: flex;align-items: center;justify-content: center;flex-wrap: wrap;}
 footer svg{fill: white;}
 footer a{ padding: 0 5px; color:var(--white); font-size: 20px;}
@@ -35,12 +39,12 @@ input + span,textarea + span,select + span{display: none;}
 input:focus + span,textarea:focus + span,select:focus + span{color:red; display: block;}
 
 /* NAV */
-nav{text-align: right; padding: 25px 50px; background-color:rgba(0,0,0,.5); position: absolute; top: 0;left: 0; width: 100%; color:var(--white);}
+nav{text-align: right; padding: 25px 50px; background-color:rgba(0,0,0,.5); position: fixed; top: 0;left: 0; width: 100%; color:var(--white); z-index:1000;}
 nav a{color:var(--pink); padding: 0 10px; text-decoration: none; font-weight: 600;}
 nav a:hover{color:var(--white);}
 
 /* CONTAINER */
-.container{max-width: 1200px; margin: 0 auto;}
+.container{max-width: 1200px; margin: 0 auto; padding: 50px;}
 
 /* socialWrp */
 .socialWrp{display: flex;align-items: start;justify-content: start;color:var(--white);}
