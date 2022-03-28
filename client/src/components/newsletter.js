@@ -21,9 +21,18 @@ const Newsletter = (props) => {
 
     const onNewsLetterSumbit = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:8000/api/create/newsletter', email)
+        axios.get(`http://localhost:8000/api/newsletter${email.email}`)
             .then(res =>  { 
+                console.log(res.data)
                 // history.push("/pirates"); 
+                // axios.post('http://localhost:8000/api/create/newsletter', email)
+                // .then(res =>  { 
+                //     // history.push("/pirates"); 
+                // })
+                // .catch(err => {
+                //     console.log(err.response)
+                //     setDBError(err.response.data.error.errors)
+                // });
             })
             .catch(err => {
                 console.log(err.response)
@@ -40,6 +49,9 @@ const Newsletter = (props) => {
                 }
                 <div>
                     <input type="email" name="email" placeholder="example@email.com" onChange={ValidateEmail} />
+                    {
+                        emailError ? "" : <span>Please enter an email</span>
+                    }
                 </div>
                 {
                     emailError === true ?  <input type="submit" value="submit" className={styled.submit}/> : <input type="submit" value="submit" className={styled.disabled} disabled />
