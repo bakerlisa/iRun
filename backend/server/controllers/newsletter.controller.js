@@ -21,6 +21,14 @@ module.exports.editNewsletter = (req,res) => {
     .catch(err => res.status(400).json({ message: 'Something went wrong when getting single Newsletter', error: err }));
 }
 
+module.exports.singleExsist = (req,res) => {
+    Newsletter.findOne({email: req.params.email})
+    .then(singleEmail => res.json({ email: singleEmail}))
+    .catch(err => res.status(400).json({ message: 'Email already exsists', error: err }));
+}
+
+
+
 // CREATE
 module.exports.createNewNewsletter = (req,res) => {
     Newsletter.create(req.body)
