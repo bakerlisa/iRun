@@ -8,8 +8,15 @@ const RecipeSchema = new mongoose.Schema({
     },
     description: {
         type:String,
-        required: [true, "Product needs description"],
+        required: [true, "Recipe needs description"],
         minlength: [10, "You must have a minimum of 10 chacters"]
+    },
+    ingredients: {
+        type:Array,
+        required: [true, "Ingredients are required"],
+    },
+    image:{
+        type: String
     },
     cooking:{
         type:Boolean
